@@ -1,1 +1,1 @@
-# CLI-Based-Password-Manager-Using-Python
+# CLI Based Password Manager Using Python
