@@ -168,8 +168,8 @@ pip install psycopg2-binary pycryptodome rich pyperclip
 ### Step 4: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/password-manager.git
-cd password-manager
+git clone https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python.git
+cd CLI_Based_Password_Manager_Using_Python
 ```
 
 ### Step 5: Run Configuration
@@ -195,7 +195,7 @@ This will:
 For a user-friendly experience with guided prompts:
 
 ```bash
-python pm_menu.py
+python pm_menu_v2.py
 ```
 
 **Menu Options:**
@@ -205,6 +205,8 @@ python pm_menu.py
 4. Delete Entry
 5. Generate Random Password
 6. Exit
+
+> **Note**: Use `pm_menu_v2.py` (version 2) which includes the delete feature with master password protection. The original `pm_menu.py` is a legacy version without delete functionality.
 
 ### Command-Line Interface
 
@@ -259,7 +261,8 @@ password-manager/
 │
 ├── config.py                 # Initial setup and configuration
 ├── pm.py                     # Command-line interface
-├── pm_menu.py               # Interactive menu interface
+├── pm_menu.py               # Interactive menu (basic version)
+├── pm_menu_v2.py            # Interactive menu v2 (with delete feature)
 │
 ├── utils/
 │   ├── dbconfig.py          # Database connection handler
@@ -269,6 +272,8 @@ password-manager/
 │   ├── generate.py          # Random password generator
 │   └── aesutil.py           # Encryption/decryption utilities
 │
+├── .gitignore               # Git ignore file
+├── LICENSE                  # MIT License
 ├── README.md                # This file
 └── requirements.txt         # Python dependencies
 ```
@@ -277,13 +282,26 @@ password-manager/
 
 - **config.py**: Run once during initial setup. Creates database, tables, and stores your hashed master password.
 - **pm.py**: Command-line interface for quick password operations.
-- **pm_menu.py**: Beautiful interactive menu with step-by-step guidance.
+- **pm_menu.py**: Basic interactive menu (legacy version without delete feature).
+- **pm_menu_v2.py**: **Current version** - Interactive menu with all features including delete functionality.
 - **dbconfig.py**: Handles PostgreSQL connections with error handling.
 - **add.py**: Encrypts and stores new password entries.
 - **retrieve.py**: Searches database and decrypts passwords.
-- **delete.py**: Securely removes password entries.
+- **delete.py**: Securely removes password entries with master password verification.
 - **generate.py**: Creates strong random passwords.
 - **aesutil.py**: Core encryption/decryption using AES-256-CBC.
+
+### Which File to Use?
+
+**Use `pm_menu_v2.py`** for the interactive menu - it includes all features:
+- Add passwords
+- View all entries
+- Search & extract passwords
+- **Delete entries** (with master password protection)
+- Generate random passwords
+- Exit
+
+The original `pm_menu.py` is kept for reference but `pm_menu_v2.py` is the recommended version.
 
 ---
 
@@ -487,7 +505,7 @@ This project is licensed under the MIT License - see below for details:
 ```
 MIT License
 
-Copyright (c) 2026 [Your Name]
+Copyright (c) 2026 Arghya Nayak
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -512,9 +530,9 @@ SOFTWARE.
 
 ## 📞 Contact
 
-**Your Name** - [arghya05nayak@gmail.com](arghya05nayak@gmail.com)
+**Arghya Nayak** - [arghya05nayak@gmail.com](mailto:arghya05nayak@gmail.com)
 
-Project Link: [https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python.git](https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python.git)
+Project Link: [https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python](https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python)
 
 ---
 
