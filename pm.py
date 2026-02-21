@@ -14,7 +14,7 @@ from utils.dbconfig import dbconfig
 
 parser = argparse.ArgumentParser(description='Password Manager')
 
-parser.add_argument('option', help='(a)dd / (e)xtract / (g)enerate / (d)elete / (u)pdate')
+parser.add_argument('option', help='(a)dd / (e)xtract / (g)enerate / (d)elete')
 parser.add_argument("-s", "--name", help="Site name")
 parser.add_argument("-u", "--url", help="Site URL")
 parser.add_argument("-e", "--email", help="Email")
@@ -128,20 +128,6 @@ def main():
                 utils.delete.deleteEntry(args.name, args.url, args.email, args.login)
             else:
                 printc("[yellow][-][/yellow] Cancelled")
-
-    if args.option in ["update", "u"]:
-        if args.name is None or args.url is None:
-            printc("[red][!][/red] Both Site Name (-s) and Site URL (-u) are required")
-            return
-        
-        if args.email is None:
-            args.email = ""
-        if args.login is None:
-            args.login = ""
-        
-        res = inputAndValidateMasterPassword()
-        if res is not None:
-            utils.update.updateEntry(res[0], res[1], args.name, args.url, args.email, args.login)
 
 
 main()
