@@ -512,9 +512,9 @@ SOFTWARE.
 
 ## 📞 Contact
 
-**Your Name** - [your.email@example.com](mailto:your.email@example.com)
+**Your Name** - [arghya05nayak@gmail.com](arghya05nayak@gmail.com)
 
-Project Link: [https://github.com/yourusername/password-manager](https://github.com/yourusername/password-manager)
+Project Link: [https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python.git](https://github.com/arghya-nayak/CLI_Based_Password_Manager_Using_Python.git)
 
 ---
 
