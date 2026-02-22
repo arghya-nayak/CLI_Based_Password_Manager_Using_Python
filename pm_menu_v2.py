@@ -16,7 +16,6 @@ import utils.add
 import utils.retrieve
 import utils.generate
 import utils.delete
-import utils.update
 from utils.dbconfig import dbconfig
 
 console = Console()
